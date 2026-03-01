@@ -1,6 +1,6 @@
 {
   "board": {
-    "active_layer": 2,
+    "active_layer": 5,
     "active_layer_preset": "",
     "auto_track_width": true,
     "hidden_netclasses": [],
@@ -54,9 +54,9 @@
     "zone_display_mode": 0
   },
   "git": {
-    "repo_type": "",
-    "repo_username": "",
-    "ssh_key": ""
+    "repo_type": "ssh",
+    "repo_username": "git",
+    "ssh_key": "C:\\Users\\naojima\\.ssh\\id_ed25519"
   },
   "meta": {
     "filename": "pre_amp_2.kicad_prl",

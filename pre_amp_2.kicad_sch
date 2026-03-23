@@ -5137,7 +5137,7 @@
 				)
 			)
 		)
-		(property "Value" "VR3_2"
+		(property "Value" "VR3_3"
 			(at 99.822 116.332 90)
 			(effects
 				(font
@@ -8078,7 +8078,7 @@
 				)
 			)
 		)
-		(property "Value" "VR1_1"
+		(property "Value" "VR3_2"
 			(at 101.346 94.488 90)
 			(effects
 				(font

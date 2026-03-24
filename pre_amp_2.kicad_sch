@@ -1200,27 +1200,27 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Regulator_SwitchedCapacitor:ICL7660"
+		(symbol "MyLibrary:TC1044S"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
-			(property "Reference" "U2"
-				(at 0 15.24 0)
+			(property "Reference" "U"
+				(at -6.35 11.43 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
 				)
 			)
-			(property "Value" "ICL7660"
-				(at 0 12.7 0)
+			(property "Value" "TC1044S"
+				(at 3.81 11.43 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
 				)
 			)
-			(property "Footprint" "Package_DIP:CERDIP-8_W7.62mm_SideBrazed_Socket"
+			(property "Footprint" ""
 				(at 2.54 -2.54 0)
 				(effects
 					(font
@@ -1265,7 +1265,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "ICL7660_0_1"
+			(symbol "TC1044S_0_1"
 				(rectangle
 					(start -7.62 10.16)
 					(end 7.62 -10.16)
@@ -1278,7 +1278,7 @@
 					)
 				)
 			)
-			(symbol "ICL7660_1_1"
+			(symbol "TC1044S_1_1"
 				(pin power_in line
 					(at -10.16 7.62 0)
 					(length 2.54)
@@ -1297,7 +1297,25 @@
 						)
 					)
 				)
-				(pin no_connect line
+				(pin input line
+					(at -10.16 3.81 0)
+					(length 2.54)
+					(name "BOOST"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
 					(at -10.16 0 0)
 					(length 2.54)
 					(name "OSC"
@@ -1315,7 +1333,7 @@
 						)
 					)
 				)
-				(pin no_connect line
+				(pin input line
 					(at -10.16 -5.08 0)
 					(length 2.54)
 					(name "LV"
@@ -1326,25 +1344,6 @@
 						)
 					)
 					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -7.62 5.08 0)
-					(length 2.54)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2262,6 +2261,12 @@
 		(uuid "8b183882-a974-4b9c-a989-f442f28246df")
 	)
 	(junction
+		(at 102.87 44.45)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "8c0acf26-b766-4df7-bc62-27817f1a2d41")
+	)
+	(junction
 		(at 149.86 107.95)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2542,6 +2547,16 @@
 			(type default)
 		)
 		(uuid "1fe7265f-551a-49d5-9295-fcc8733fc119")
+	)
+	(wire
+		(pts
+			(xy 105.41 48.26) (xy 102.87 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2134fe46-f601-41e7-a8b0-4a9539bb5917")
 	)
 	(wire
 		(pts
@@ -2945,6 +2960,16 @@
 	)
 	(wire
 		(pts
+			(xy 102.87 44.45) (xy 105.41 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6bb4d88e-13f2-4428-94ad-4a04cc95bdff")
+	)
+	(wire
+		(pts
 			(xy 67.31 102.87) (xy 76.2 102.87)
 		)
 		(stroke
@@ -3235,7 +3260,7 @@
 	)
 	(wire
 		(pts
-			(xy 81.28 44.45) (xy 105.41 44.45)
+			(xy 81.28 44.45) (xy 102.87 44.45)
 		)
 		(stroke
 			(width 0)
@@ -3682,6 +3707,16 @@
 			(type default)
 		)
 		(uuid "ed9861e1-f7e7-48df-8890-7744b89a242f")
+	)
+	(wire
+		(pts
+			(xy 102.87 48.26) (xy 102.87 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "edd4f5d8-5667-406e-9b2d-eb92c415d7f6")
 	)
 	(wire
 		(pts
@@ -4194,92 +4229,6 @@
 			(project "pre_amp_2"
 				(path "/a24a43ce-b78c-4b02-8ea5-638bfbce1c81"
 					(reference "#PWR03")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Regulator_SwitchedCapacitor:ICL7660")
-		(at 115.57 52.07 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "16d0aaf8-b8cc-4485-9c00-1c557a651762")
-		(property "Reference" "U2"
-			(at 115.57 36.83 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "ICL7660"
-			(at 115.57 39.37 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_DIP:CERDIP-8_W7.62mm_SideBrazed_Socket"
-			(at 118.11 54.61 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://datasheets.maximintegrated.com/en/ds/ICL7660-MAX1044.pdf"
-			(at 118.11 54.61 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Switched-Capacitor Voltage Converter, 1.5V to 10.0V operating supply voltage, 10mA with a 0.5V output drop, SO-8/DIP-8/µMAX-8/TO-99"
-			(at 115.57 52.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "4"
-			(uuid "98029211-2373-4ef7-8a00-1dbeb46f8b34")
-		)
-		(pin "1"
-			(uuid "def10c76-63ac-4fc1-8020-bba4fa7d741b")
-		)
-		(pin "8"
-			(uuid "28d0b8ea-3c88-4ae3-a86f-32bea6563446")
-		)
-		(pin "3"
-			(uuid "a8c0e177-380b-4207-8cc3-f9da48faecd9")
-		)
-		(pin "5"
-			(uuid "00b5a9a5-e6b2-4299-bf10-5658e737ceed")
-		)
-		(pin "2"
-			(uuid "b87bd9a8-91ae-4ec0-9b7d-46b24de2df19")
-		)
-		(pin "7"
-			(uuid "c311c93b-1387-4314-9da6-7d454cd653a3")
-		)
-		(pin "6"
-			(uuid "504f0d44-aff2-4c2f-877d-d91722461e23")
-		)
-		(instances
-			(project "pre_amp_2"
-				(path "/a24a43ce-b78c-4b02-8ea5-638bfbce1c81"
-					(reference "U2")
 					(unit 1)
 				)
 			)
@@ -6238,6 +6187,92 @@
 		)
 	)
 	(symbol
+		(lib_id "MyLibrary:TC1044S")
+		(at 115.57 52.07 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6ac653e1-499d-41cf-957e-4b4234ed38e6")
+		(property "Reference" "U3"
+			(at 115.57 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TC1044S"
+			(at 115.57 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_DIP:CERDIP-8_W7.62mm_SideBrazed_Socket"
+			(at 118.11 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://datasheets.maximintegrated.com/en/ds/ICL7660-MAX1044.pdf"
+			(at 118.11 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Switched-Capacitor Voltage Converter, 1.5V to 10.0V operating supply voltage, 10mA with a 0.5V output drop, SO-8/DIP-8/µMAX-8/TO-99"
+			(at 115.57 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "8"
+			(uuid "a0783994-a41d-4f6c-bdd9-0e6cbecde9b2")
+		)
+		(pin "7"
+			(uuid "9ccbf429-ccdc-4eb3-85e7-ad890c53c29f")
+		)
+		(pin "5"
+			(uuid "3e700cd9-41cb-444a-8ea4-e6af186a1463")
+		)
+		(pin "4"
+			(uuid "3c4ddc37-1ef8-406b-b571-4d984f608367")
+		)
+		(pin "2"
+			(uuid "7d8a3a93-f094-4215-8257-2c6172f780d3")
+		)
+		(pin "1"
+			(uuid "bb1f896c-9dc3-4d70-a634-b65d1c30de3d")
+		)
+		(pin "6"
+			(uuid "c1c62bd9-0981-4ad8-880d-85a47737a7d5")
+		)
+		(pin "3"
+			(uuid "84368de0-86c4-44e4-a5ac-549372d56781")
+		)
+		(instances
+			(project ""
+				(path "/a24a43ce-b78c-4b02-8ea5-638bfbce1c81"
+					(reference "U3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 140.97 19.05 0)
 		(unit 1)
@@ -7375,7 +7410,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "100"
+		(property "Value" "10"
 			(at 83.82 49.5299 0)
 			(effects
 				(font
@@ -8143,7 +8178,7 @@
 				)
 			)
 		)
-		(property "Value" "100"
+		(property "Value" "10"
 			(at 142.24 41.91 90)
 			(effects
 				(font
